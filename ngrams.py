@@ -49,7 +49,7 @@ def testNgram(k, model, testSet, targetLabels):
             output.append(x.split(' ', 1)[0])
         if targetLabels[i] in output:
             hits += 1
-    return hits 
+    return hits/197 # We divide the hits by 197 to get average S@K
 
 def generate_sent(model, num_words, text): 
     '''
