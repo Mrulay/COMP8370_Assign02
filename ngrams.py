@@ -70,13 +70,13 @@ def savetoCSV(s_at_k):
     Function that writes all the outputs (s@k) to the csv
     '''
     row = ",".join(s_at_k)
-    with open('output.csv') as f:
+    with open('output1.csv') as f:
         writer = csv.writer(f)
         writer.writerow(row)
 
 if __name__ == '__main__':
     
-    with open("APPLING1DAT.643") as f:
+    with open("/content/COMP8370_Assign02/APPLING1DAT.643") as f:
         bbkLines = f.readlines() # reading misspelled sentences from the APPLING1DAT.643 file
     
     bbkLines = [l for l in bbkLines if "$" not in l] # removing words with $ tags  
